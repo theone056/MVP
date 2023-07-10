@@ -1,8 +1,12 @@
+using MVP.Services.API.Product;
+using MVP.Services.API.Product.Interface;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IProductAPIService, ProductAPIService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -1,0 +1,24 @@
+﻿@model List<ProductViewModel>
+
+
+<table class="table table-responsive table-bordered">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m=>m.ElementAt(0).Id)</th>
+            <th>@Html.DisplayNameFor(m=>m.ElementAt(0).Name)</th>
+            <th>@Html.DisplayNameFor(m=>m.ElementAt(0).Description)</th>
+            <th>@Html.DisplayNameFor(m=>m.ElementAt(0).Link)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var product in Model)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Description</td>
+                <td>@product.Link</td>
+            </tr>
+        }
+    </tbody>
+</table>
